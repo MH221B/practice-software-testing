@@ -1,0 +1,232 @@
+[
+  {
+    "name":"Nike",
+    "slug":"nike",
+    "expectedResult":"pass"
+  },
+  {
+    "name":"",
+    "slug":"nike-1",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"   ",
+    "slug":"nike-2",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"  Nike",
+    "slug":"nike-3",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike  ",
+    "slug":"nike-4",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"A",
+    "slug":"nike-5",
+    "expectedResult":"pass"
+  },
+  {
+    "name":"Aa",
+    "slug":"nike-6",
+    "expectedResult":"pass"
+  },
+  {
+    "name":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "slug":"nike-7",
+    "expectedResult":"pass"
+  },
+  {
+    "name":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "slug":"nike-8",
+    "expectedResult":"pass"
+  },
+  {
+    "name":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "slug":"nike-9",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike",
+    "slug":"nike-10",
+    "expectedResult":"pass"
+  },
+  {
+    "name":"Nike-1",
+    "slug":"",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-2",
+    "slug":"   ",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-3",
+    "slug":" nike",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-4",
+    "slug":"nike ",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-5",
+    "slug":"a",
+    "expectedResult":"pass"
+  },
+  {
+    "name":"Nike-6",
+    "slug":"aa",
+    "expectedResult":"pass"
+  },
+  {
+    "name":"Nike-7",
+    "slug":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "expectedResult":"pass"
+  },
+  {
+    "name":"Nike-8",
+    "slug":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "expectedResult":"pass"
+  },
+  {
+    "name":"Nike-9",
+    "slug":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-10",
+    "slug":"my slug",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-11",
+    "slug":"Nike",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-12",
+    "slug":"\u00e1o-th\u1ec3-thao",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-13",
+    "slug":"nike@123",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-14",
+    "slug":"nike-123",
+    "expectedResult":"pass"
+  },
+  {
+    "name":"Nike-15",
+    "slug":"nike",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"' OR '1'='1",
+    "slug":"nike-27",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-28",
+    "slug":"' OR '1'='1",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"'; DROP TABLE users; --",
+    "slug":"nike-29",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-30",
+    "slug":"'; DROP TABLE users; --",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"\" OR \"\" = \"",
+    "slug":"nike-31",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-32",
+    "slug":"\" OR \"\" = \"",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"admin' --",
+    "slug":"nike-33",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-34",
+    "slug":"admin' --",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"admin\" --",
+    "slug":"nike-35",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-36",
+    "slug":"admin\" --",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"<script>alert('XSS')<\/script>",
+    "slug":"nike-37",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-38",
+    "slug":"<script>alert('XSS')<\/script>",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"<img src=x onerror=alert(1)>",
+    "slug":"nike-39",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-40",
+    "slug":"<img src=x onerror=alert(1)>",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"<svg\/onload=alert(1)>",
+    "slug":"nike-41",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-42",
+    "slug":"<svg\/onload=alert(1)>",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"<iframe src=javascript:alert('XSS')>",
+    "slug":"nike-43",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-44",
+    "slug":"<iframe src=javascript:alert('XSS')>",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"<body onload=alert('XSS')>",
+    "slug":"nike-45",
+    "expectedResult":"fail"
+  },
+  {
+    "name":"Nike-46",
+    "slug":"<body onload=alert('XSS')>",
+    "expectedResult":"fail"
+  }
+]

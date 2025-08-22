@@ -45,6 +45,6 @@ jobs:
 
       - name: Run Postman API tests 
         run: |
-          newman run tests/postman/Login.postman_collection.json --iteration-data tests/postman/LoginData.csv --reporters cli
-          newman run tests/postman/Admin Search User.postman_collection.json --iteration-data tests/postman/AdminSearchQueryData.csv --reporters cli
-          newman run tests/postman/Add New Product.postman_collection.json --iteration-data tests/postman/NewProductData --reporters cli
+          newman run tests/postman/ToolShop.postman_collection.json --folder "Register" --iteration-data tests/postman/testcase_data.json --reporters cli
+          newman run tests/postman/ToolShop.postman_collection.json --folder "Brand" --iteration-data tests/postman/testcase_brand.json --reporters cli
+          newman run tests/postman/ToolShop.postman_collection.json --folder "Category" --iteration-data tests/postman/testcase_category.json --reporters cli
