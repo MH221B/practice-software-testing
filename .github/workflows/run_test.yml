@@ -43,8 +43,22 @@ jobs:
       - name: Install Newman
         run: npm install -g newman 
 
-      - name: Run Postman API tests 
+      - name: Run all Postman API tests and report final status
         run: |
-          newman run tests/postman/ToolShop.postman_collection.json --folder "Register" --iteration-data tests/postman/testcase_data.json --reporters cli
-          newman run tests/postman/ToolShop.postman_collection.json --folder "Brand" --iteration-data tests/postman/testcase_brand.json --reporters cli
-          newman run tests/postman/ToolShop.postman_collection.json --folder "Category" --iteration-data tests/postman/testcase_category.json --reporters cli
+          # Initialize a variable to track failures
+          FAILURE_DETECTED=0
+
+          # Run each test suite. If a command fails, the '||' operator will set the flag to 1.
+          echo "--- Running Register tests ---"
+          newman run tests/postman/ToolShop.postman_collection.json --folder "Register" --iteration-data tests/postman/testcase_data.json --reporters cli || FAILURE_DETECTED=1
+
+          echo "--- Running Brand tests ---"
+          newman run tests/postman/ToolShop.postman_collection.json --folder "Brand" --iteration-data tests/postman/testcase_brand.json --reporters cli || FAILURE_DETECTED=1
+          
+          echo "--- Running Category tests ---"
+          newman run tests/postman/ToolShop.postman_collection.json --folder "Category" --iteration-data tests/postman/testcase_category.json --reporters cli || FAILURE_DETECTED=1
+          
+          # Check the flag at the end of the script
+          if [ $FAILURE_DETECTED -ne 0 ]; then
+            echo "One or more Newman test suites failed."
+            exit 1
