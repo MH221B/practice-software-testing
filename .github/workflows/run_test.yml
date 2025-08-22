@@ -41,7 +41,7 @@ jobs:
           node-version: 22
 
       - name: Install Newman
-        run: npm install -g newman
+        run: npm install -g newman 
 
       - name: Run Postman API tests 
         run: |
